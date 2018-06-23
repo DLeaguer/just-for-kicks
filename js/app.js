@@ -73,10 +73,27 @@ function countPlus() {
 
 
 //6. Add an event to the minus icon that will decrement the price of the Air Jordan V shoe each time the icon is clicked on.
+var getPrice5 = document.getElementById('price5');
+var getDecrease = document.getElementById('decrease');
+getDecrease.addEventListener('click', countMinus);
 
+function countMinus() {
+    getPrice5.innerHTML = parseFloat(getPrice5.innerHTML) - 1;
+    getPrice5.appendChild(getDecrease);
+}
 
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
+var getImg = document.getElementsByTagName('img')[6];
+getImg.addEventListener('mouseover', changeShoe);
+getImg.addEventListener('mouseout', changeBack);
 
+function changeShoe() {
+    getImg.src = 'https://www.sneakerlegends.com/images/stories/virtuemart/product/378038117.jpg';
+}
+
+function changeBack() {
+    getImg.src = 'https://www.sneakerlegends.com/images/stories/virtuemart/product/378037623%20378037623%20378037623%20378037623.jpg';
+}
 
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
 
