@@ -67,7 +67,7 @@ var getIncrease = document.getElementById('increase');
 getIncrease.addEventListener('click', countPlus);
 
 function countPlus() {
-    getPrice4.innerHTML = parseFloat(getPrice4.innerHTML) + 1;
+    getPrice4.innerHTML = parseInt(getPrice4.innerHTML, 10) + 1;
     getPrice4.appendChild(getIncrease);
 }
 
@@ -83,20 +83,34 @@ function countMinus() {
 }
 
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
-var getImg = document.getElementsByTagName('img')[6];
-getImg.addEventListener('mouseover', changeShoe);
-getImg.addEventListener('mouseout', changeBack);
+var getImg6 = document.getElementsByTagName('img')[6];
+getImg6.addEventListener('mouseover', changeShoe);
+getImg6.addEventListener('mouseout', changeBack);
 
 function changeShoe() {
-    getImg.src = 'https://www.sneakerlegends.com/images/stories/virtuemart/product/378038117.jpg';
+    getImg6.src = 'https://www.sneakerlegends.com/images/stories/virtuemart/product/378038117.jpg';
 }
 
 function changeBack() {
-    getImg.src = 'https://www.sneakerlegends.com/images/stories/virtuemart/product/378037623%20378037623%20378037623%20378037623.jpg';
+    getImg6.src = 'https://www.sneakerlegends.com/images/stories/virtuemart/product/378037623%20378037623%20378037623%20378037623.jpg';
 }
 
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
+var getImg7 = document.getElementsByTagName('img')[7];
+getImg7.addEventListener('click', shoelarger);
+getImg7.addEventListener('mouseout', shoeSmaller);
+
+function shoelarger() {
+    getImg7.style.width = '375px';
+    getImg7.style.height = '375px';
+}
+
+function shoeSmaller() {
+    getImg7.style.width = '250px';
+    getImg7.style.height = '250px';
+}
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
+
 
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
